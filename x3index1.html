@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AngularSpringApp">
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Smarty - Multipurpose + Admin</title>
+		<meta name="keywords" content="HTML5,CSS3,Template" />
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="smarty/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- SWIPER SLIDER -->
+		<link href="smarty/assets/plugins/slider.swiper/dist/css/swiper.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="smarty/assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="smarty/assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="smarty/assets/css/header-0.css" rel="stylesheet" type="text/css" />
+		<link href="smarty/assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+        <link rel="stylesheet" href="jqwidgets/styles/jqx.base.css" type="text/css" />
+	</head>
+
+<body class="smoothscroll enable-animation menu-vertical menu-vertical-hide">
+  <div id="wrapper">
+			<!--
+				SIDE MENU 
+				.sidebar-hidden = open only on click
+			-->
+    <div id="mainMenu" class="sidebar-vertical sidebar-hidden">
+				<button id="sidebar_vertical_btn"><i></i></button>
+				<div class="sidebar-nav">
+					<div class="navbar navbar-default" role="navigation">
+                       <div class="logo text-center">Administrator</div>
+						<!--
+                        <a href="index.html" class="logo text-center">
+							<img src="smarty/assets/images/logo.png" alt="">
+						</a>
+                        -->
+
+						<div class="navbar-collapse sidebar-navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+
+							<!-- MENU -->
+							<ul class="nav navbar-nav">
+								<li>
+									<a href="index.html">
+										<i class="et-trophy"></i> 
+										Home
+									</a>
+								</li>
+								<li class="dropdown" >
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+										<i class="et-basket"></i>
+                                        Cars
+									</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:openWindow()">Add Car</a></li>
+                                    </ul>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+										<i class="et-layers"></i>
+                                        Chauffeur
+									</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:openWindow2()">Add Chauffeur</a></li>
+                                    </ul>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="">
+										<i class="et-beaker"></i> 
+										Rates
+									</a>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="">
+										<i class="et-mic"></i> 
+										Account
+									</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="feature-header-side-left-1-gg.html">Add Rates</a></li>
+                                        <li><a href="feature-header-side-left-1-gg.html">Generate Invoice</a></li>
+                                    </ul>
+								</li>
+								<li>
+									<a href="page-contact-1.html">
+										<i class="et-envelope"></i> 
+										Contact Us
+									</a>
+								</li>
+							</ul>
+							<!-- /MENU -->
+						</div><!--/.nav-collapse -->
+					</div>
+				</div>
+			</div>
+			<!-- /SIDE MENU -->
+
+      <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#">Rent A Car</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+
+			
+    <div class="container">
+       <!--Ccontainer -->
+
+	</div>
+
+      <div style="width: 100%; height: 650px; margin-top: 50px;" id="mainDemoContainer">
+          <div id="window">
+              <div id="windowHeader">
+                    <span>
+                        Car Detail
+                    </span>
+              </div>
+              <div style="overflow: hidden;" id="windowContent">
+                  <form class="form-horizontal" role="form">
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="make">Make:</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="make" placeholder="Enter Make">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="model">Model:</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="model" placeholder="Enter Model">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="year">Year:</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="year" placeholder="Enter Year">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="capacity">Capacity:</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="capacity" placeholder="Enter Capacity">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="col-sm-offset-2 col-sm-10">
+                              <button type="submit" class="btn btn-default">Submit</button>
+                              <button type="button" class="btn btn-default">Cancel</button>
+                          </div>
+                      </div>
+                  </form>
+
+              </div>
+          </div>
+      </div>
+      <div style="width: 100%; height: 650px; margin-top: 50px;" id="mainDemoContainer2">
+          <div id="window1">
+              <div id="windowHeader1">
+                    <span>
+                        Chauffeur Detail
+                    </span>
+              </div>
+              <div style="overflow: hidden;" id="windowContent1">
+                  <form class="form-horizontal" role="form">
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="firstname">First Name:</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="firstname" placeholder="Enter First Name">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="lastname">Last Name:</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="lastname" placeholder="Enter Last Name">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="age">Age:</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="age" placeholder="Enter Age">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="contact">Contact No:</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="contact" placeholder="Enter Contact">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="col-sm-offset-2 col-sm-10">
+                              <button type="submit" class="btn btn-default">Submit</button>
+                              <button type="button" class="btn btn-default">Cancel</button>
+                          </div>
+                      </div>
+                  </form>
+
+              </div>
+          </div>
+      </div>
+  </div><!-- /.container -->
+
+  <script type="text/javascript">var plugin_path = 'smarty/assets/plugins/';</script>
+
+
+  <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="scripts.js"></script>
+
+  <script type="text/javascript" src="jqwidgets/jqxcore.js"></script>
+  <script type="text/javascript" src="jqwidgets/jqxwindow.js"></script>
+  <script type="text/javascript" src="jqwidgets/jqxbuttons.js"></script>
+  <script type="text/javascript" src="jqwidgets/jqxscrollbar.js"></script>
+  <script type="text/javascript" src="jqwidgets/jqxpanel.js"></script>
+  <script type="text/javascript" src="jqwidgets/jqxtabs.js"></script>
+  <script type="text/javascript" src="jqwidgets/jqxcheckbox.js"></script>
+
+  <script type="text/javascript">
+
+        $(document).ready(function () {
+
+                $('#window').jqxWindow({
+                    autoOpen:false,
+                    'resizable':false,
+                    position: { x: 300, y: 300 + 50} ,
+                    showCollapseButton: true, maxHeight: 400, maxWidth: 700, minHeight: 200, minWidth: 200, height: 300, width: 500
+                });
+
+                $('#window1').jqxWindow({
+                    autoOpen:false,
+                    'resizable':false,
+                    position: { x: 300, y: 300 + 50} ,
+                    showCollapseButton: true, maxHeight: 400, maxWidth: 700, minHeight: 200, minWidth: 200, height: 300, width: 500
+                });
+
+        });
+
+        function openWindow() {
+            $('#window').jqxWindow('open');
+
+        }
+        function openWindow2() {
+            $('#window1').jqxWindow('open');
+
+        }
+
+    </script>
+
+</body>
+</html>
