@@ -1,0 +1,467 @@
+<form name="companyForm" ng-controller="CompanyCtrl" novalidate class="form-horizontal" > 
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" >Company Code:</div>
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" name="companyCode" ng-model="companyCode" ng-required >
+                </div>
+             </div>
+         </div>    
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" for="altLanguage">Alt Language:</div>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="altLanguage" placeholder="">
+                </div>
+             
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label"  for="companyCode">Name:</div>
+                </div>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="companyCode" placeholder="">
+                </div>
+             </div>
+         </div>    
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" for="altLanguage">In Local Lang:</div>
+                </div>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="altLanguage" >
+                </div>
+             
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-12">
+            <label class="control-label" for="altLanguage">Address:</label>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label"  for="companyCode">Office No:</div>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="companyCode" placeholder="">
+                </div>
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" for="companyCode">Address Line 1:</div>
+                </div>
+                <div class="col-md-9">
+                    <input type="text" class="form-control"  id="companyCode" placeholder="">
+                </div>
+             </div>
+         </div>    
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" for="altLanguage">In Local Lang:</div>
+                </div>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="altLanguage" >
+                </div>
+             
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" for="companyCode">Address Line 2:</div>
+                </div>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="companyCode" placeholder="">
+                </div>
+             </div>
+         </div>    
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label"  for="altLanguage">In Local Lang:</div>
+                </div>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="altLanguage" >
+                </div>
+             
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" for="companyCode">Country:</div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="companyCode" placeholder="">
+                </div>
+             </div>
+         </div>    
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label"  for="altLanguage">ZIP:</div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="altLanguage" >
+                </div>
+             
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label"  for="companyCode">State:</div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" ng-model="selected"  uib-typeahead="state as state.name for state in states | filter:{name:$viewValue}" typeahead-is-open="amiopen" typeahead-template-url="customTemplate.html" typeahead-min-length="0" typeahead-editable="true">
+                </div>
+             </div>
+         </div>    
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label"  for="altLanguage">PO:</div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="altLanguage" >
+                </div>
+             
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label"  for="companyCode">City:</div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="companyCode" placeholder="">
+                </div>
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" for="companyCode">&nbsp;</div>
+                </div>
+                <div class="col-md-9">
+                    <div class="checkbox">
+                        <label>
+                        <input type="checkbox" value="">
+                            Installation Cc Required at Login:
+                        </label>
+                    </div>
+                </div>
+             </div>
+         </div>
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-12">
+                    <label class="radio-inline">
+                      <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Location
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">Region-Location
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">Company-Region Locaction
+                    </label>
+               </div>
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-12">
+            <label class="control-label" for="altLanguage">Legals:</label>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label" style="float:left" for="companyCode">S.Tax Reg.#:</div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="companyCode" placeholder="">
+                </div>
+               <div class="col-md-3">
+                    <div class="control-label" style="float:left" for="companyCode">In Local Lang</div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="companyCode" placeholder="">
+                </div>
+			 </div>
+         </div>    
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label" style="float:left" for="companyCode">Issue Date:</div>
+                </div>
+                <div class="col-md-3">
+                    <p class="input-group">
+                        <input type="text" class="form-control"  uib-datepicker-popup="{{format}}" ng-model="datepickers.sTaxIssue.val" is-open="datepickers.sTaxIssue.opened"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default cal-icon"  ng-click="datepickers.sTaxIssue.opened=true"><i class="glyphicon  glyphicon-calendar"></i>
+                            </button>
+                        </span>
+                    </p>                
+                </div>
+               <div class="col-md-3">
+                    <div class="control-label" style="float:left" for="companyCode">Expiry Date</div>
+                </div>
+                <div class="col-md-3">
+                    <p class="input-group">
+                        <input type="text" class="form-control"  uib-datepicker-popup="{{format}}" ng-model="datepickers.sTaxExpiry.val" is-open="datepickers.sTaxExpiry.opened"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default cal-icon"  ng-click="datepickers.sTaxExpiry.opened=true"><i class="glyphicon  glyphicon-calendar"></i>
+                            </button>
+                        </span>
+                    </p>                
+                </div>
+			 </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label" style="float:left" for="companyCode">VAT No.:</div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="companyCode" placeholder="">
+                </div>
+               <div class="col-md-3">
+                    <div class="control-label" style="float:left" for="companyCode">In Local Lang:</div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="companyCode" placeholder="">
+                </div>
+			 </div>
+         </div>    
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label" style="float:left" for="companyCode">Issue Date:</div>
+                </div>
+                <div class="col-md-3">
+                    <p class="input-group">
+                        <input type="text" class="form-control"  uib-datepicker-popup="{{format}}" ng-model="datepickers.vatIssue.val" is-open="datepickers.vatIssue.opened"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default cal-icon"  ng-click="datepickers.vatIssue.opened=true"><i class="glyphicon  glyphicon-calendar"></i>
+                            </button>
+                        </span>
+                    </p>                
+                </div>
+               <div class="col-md-3">
+                    <div class="control-label" style="float:left" for="companyCode">Expiry Date:</div>
+                </div>
+                <div class="col-md-3">
+                    <p class="input-group">
+                        <input type="text" class="form-control"  uib-datepicker-popup="{{format}}" ng-model="datepickers.vatExpiry.val" is-open="datepickers.vatExpiry.opened"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default cal-icon"  ng-click="datepickers.vatExpiry.opened=true"><i class="glyphicon  glyphicon-calendar"></i>
+                            </button>
+                        </span>
+                    </p>                
+                </div>
+			 </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label" style="float:left" for="companyCode">Trade LIC #:</div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="companyCode" placeholder="">
+                </div>
+               <div class="col-md-3">
+                    <div class="control-label" style="float:left" for="companyCode">In Local Lang:</div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="companyCode" placeholder="">
+                </div>
+			 </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label" style="float:left" for="companyCode">Issue Date:</div>
+                </div>
+                <div class="col-md-3">
+                    <p class="input-group">
+                        <input type="text" class="form-control"  uib-datepicker-popup="{{format}}" ng-model="datepickers.legalIssue.val" is-open="datepickers.legalIssue.opened"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default cal-icon"  ng-click="datepickers.legalIssue.opened=true"><i class="glyphicon  glyphicon-calendar"></i>
+                            </button>
+                        </span>
+                    </p>                
+                </div>
+               <div class="col-md-3">
+                    <div class="control-label" style="float:left" for="companyCode">In Local Lang:</div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="companyCode" placeholder="">
+                </div>
+			 </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label" style="float:left" for="companyCode">Expiry Date:</div>
+                </div>
+                <div class="col-md-3">
+                    <p class="input-group">
+                        <input type="text" class="form-control"  uib-datepicker-popup="{{format}}" ng-model="datepickers.legalExpiry.val" is-open="datepickers.legalExpiry.opened"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default cal-icon"  ng-click="datepickers.legalExpiry.opened=true"><i class="glyphicon  glyphicon-calendar"></i>
+                            </button>
+                        </span>
+                    </p>                
+               </div>
+               <div class="col-md-3"  >
+                    <div class="control-label cus-label" for="companyCode">In Local Lang:</div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="companyCode" placeholder="">
+                </div>
+			 </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-12">
+            <label class="control-label" for="altLanguage">Globals Contact Details:</label>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" >Global HO:</div>
+                </div>
+                <div class="col-md-9">
+                    <input type="email" class="form-control" id="companyCode" placeholder="">
+                </div>
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" >Email-Self-Rental:</div>
+                </div>
+                <div class="col-md-9">
+                    <input type="email" class="form-control" id="companyCode" placeholder="">
+                </div>
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" >Email-Limousine:</div>
+                </div>
+                <div class="col-md-9">
+                    <input type="email" class="form-control" id="companyCode" placeholder="">
+                </div>
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" >Email-Taxi Service:</div>
+                </div>
+                <div class="col-md-9">
+                    <input type="email" class="form-control" id="companyCode" placeholder="">
+                </div>
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" >Email-Veh. Lease:</div>
+                </div>
+                <div class="col-md-9">
+                    <input type="email" class="form-control" id="companyCode" placeholder="">
+                </div>
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" >Email-Equipment:</div>
+                </div>
+                <div class="col-md-9">
+                    <input type="email" class="form-control" id="companyCode" placeholder="">
+                </div>
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" >Email-Accounts:</div>
+                </div>
+                <div class="col-md-9">
+                    <input type="email" class="form-control" id="companyCode" placeholder="">
+                </div>
+             </div>
+         </div>    
+      </div>
+      <div class="row form-group">
+         <div class="col-md-6">
+             <div class="row">
+               <div class="col-md-3">
+                    <div class="control-label cus-label" >Email-Cust. Care:</div>
+                </div>
+                <div class="col-md-9">
+                    <input type="email" class="form-control" name="emailCustCare" ng-model="emailCustCare" nq-required>
+                </div>
+             </div>
+         </div>    
+      </div>
+    
+</form>
+
